@@ -10,9 +10,7 @@ export interface Subscription {
   storeId: string;
   invoiceId: string;
   reference: string;
-
   status: "confirmed" | "pending" | "cancelled";
-
   startDate: Date;
   expireDate: Date;
   autoRenew: boolean;
