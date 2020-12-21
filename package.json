@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Knawat/types/issues"
   },
-  "homepage": "https://github.com/Knawat/types#readme"
+  "homepage": "https://github.com/Knawat/types#readme",
+  "private": "false"
 }
