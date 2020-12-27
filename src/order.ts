@@ -4,6 +4,7 @@ export interface Order {
   id: string;
   items: Partial<OrderItem>[];
   shipping: Address;
+  deliveryAddress?: Address;
   total: number;
   discount: number;
   externalId: string;
