@@ -1,59 +1,35 @@
 import { Address } from "./common";
 
-export interface POrder {
-  id: string;
-  items: Partial<OrderItem>[];
-  shipping: Address;
-  deliveryAddress?: Address;
+export interface KnawatOrder {
+  purchaseorderId: string;
+  purchaseorderNumber: string;
+  orderStatus: string;
   total: number;
-  discount: number;
-  externalId: string;
-  createDate: Date;
-  updateDate: Date;
-  notes: string;
-  adjustment: number;
-  adjustmentDescription: string;
-  orderNumber: string;
-  taxTotal: number;
-  invoice_url: string;
-  shipping_method: string;
-  shipment_date: string;
-  trackingNumber: string;
-  coupon: string;
-  warnings: string[];
-  warningsSnippet: string;
-  financialStatus:
-    | "unpaid"
-    | "paid"
-    | "partially_paid"
-    | "voided"
-    | "wallet_refunded"
-    | "wallet_partially_refunded"
-    | "refunded"
-    | "partially_refunded";
-  fulfillmentStatus:
-    | "pending"
-    | "processing"
-    | "packed"
-    | "shipped"
-    | "delivered"
-    | "voided";
+  shipmentTrackingNumber: string;
+  deliveryDate: Date;
+  expectedDeliveryDate: Date;
+  shipVia: string;
+  status: string;
+  currencyCode?: string;
+  currencySymbol?: string;
+  subTotal: number;
+  isInclusiveTax: boolean;
+  items: item[];
+  note: string;
+  attention: string;
+  shipping: Address;
+  deliveryAddress: Address;
 }
 
-interface OrderItem {
-  id: string;
+export interface item {
   sku: string;
   name: string;
-  description: string;
   rate: number;
-
   quantity: number;
-  quantityCancelled: number;
-  discount: number;
-  total: number;
-
   taxId: string;
   taxName: string;
-  taxType: string;
   taxPercentage: number;
+  description: string;
+  discount: number;
+  total: number;
 }
