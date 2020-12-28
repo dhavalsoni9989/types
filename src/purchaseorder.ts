@@ -1,6 +1,6 @@
 import { Address } from "./common";
 
-export interface KnawatOrder {
+export interface PurchaseOrder {
   purchaseorderId: string;
   purchaseorderNumber: string;
   orderStatus: string;
