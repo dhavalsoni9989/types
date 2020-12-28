@@ -1,9 +1,10 @@
 import { Address } from "./common";
 
-export interface Order {
+export interface POrder {
   id: string;
   items: Partial<OrderItem>[];
   shipping: Address;
+  deliveryAddress?: Address;
   total: number;
   discount: number;
   externalId: string;
