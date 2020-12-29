@@ -14,14 +14,14 @@ export interface PurchaseOrder {
   currencySymbol?: string;
   subTotal: number;
   isInclusiveTax: boolean;
-  items: item[];
+  items: Item[];
   note: string;
   attention: string;
   shipping: Address;
   deliveryAddress: Address;
 }
 
-export interface item {
+interface Item {
   sku: string;
   name: string;
   rate: number;
