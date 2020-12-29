@@ -25,7 +25,7 @@ export interface Supplier {
   last_translation_update: string;
   translation_worker: boolean;
   address: SupplierAddress[];
-  users: user[];
+  users: User[];
   key: string;
   billing: {
     address: Address;
@@ -33,7 +33,7 @@ export interface Supplier {
     registration_number: string | number;
     legal_name: string;
   };
-  bank: bank;
+  bank: Bank;
   excluded_brands: string[];
   excluded_attributes: string[];
   excluded_categories: string[];
@@ -71,7 +71,7 @@ interface SupplierAddress {
   state: string;
   country: string;
 }
-interface bank {
+interface Bank {
   swift_code: string;
   iban_no: string;
   recipient_name: string;
@@ -80,7 +80,7 @@ interface bank {
   bank_country: string;
   bank_branch: string;
 }
-interface user {
+interface User {
   email: string;
   // TODO: enum roles
   roles: string[];
