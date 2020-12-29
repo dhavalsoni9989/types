@@ -18,7 +18,6 @@ export interface PurchaseOrder {
   note: string;
   attention: string;
   shipping: Address;
-  deliveryAddress: Address;
 }
 
 interface Item {
