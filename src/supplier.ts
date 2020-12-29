@@ -21,8 +21,9 @@ export interface Supplier {
     };
   languages: string[];
   company_description: string;
+  jscrapper_urls: string;
   translation_pipes: TranslationPipe[];
-  last_translation_update: string;
+  last_translation_update: Date;
   translation_worker: boolean;
   address: SupplierAddress[];
   users: User[];
