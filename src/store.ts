@@ -11,8 +11,8 @@ export interface Store {
   currency: string;
 
   debit: number;
-  external_data: object;
-  internal_data: object;
+  external_data: unknown;
+  internal_data: unknown;
 
   languages: string[];
   logo: string;

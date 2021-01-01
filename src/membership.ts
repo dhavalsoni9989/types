@@ -13,6 +13,6 @@ export class Membership {
   discount: number;
   paymentFrequency: number;
   paymentFrequencyType: "month" | "year";
-  attributes: object;
+  attributes: unknown;
   coupon: Coupon;
 }

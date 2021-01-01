@@ -28,7 +28,7 @@ export interface Supplier {
   integrations: {
     data: {
       access_token: string;
-      fields: any;
+      fields: unknown;
     };
     enabled: boolean;
     type: string;
