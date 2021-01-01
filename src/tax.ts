@@ -1,9 +1,9 @@
 export interface Tax {
-  id: string;
-  name: string;
-  country: string;
   class: string[];
-  percentage: number;
-  omsId: string;
+  country: string;
+  id: string;
   isInclusive: boolean;
+  name: string;
+  omsId: string;
+  percentage: number;
 }

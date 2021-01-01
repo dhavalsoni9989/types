@@ -1,10 +1,25 @@
 import { Address } from "./common";
 
 export interface Store {
-  url: string;
+  address: BillingAddress;
+
+  compared_at_price: number;
+  consumer_key: string;
+  consumer_secret: string;
+  created: Date;
+  credit: number;
+  currency: string;
+
+  debit: number;
+  external_data: unknown;
+  internal_data: unknown;
+
+  languages: string[];
+  logo: string;
 
   name: string;
-  logo: string;
+  sale_price: number;
+
   status:
     | "pending"
     | "confirmed"
@@ -25,32 +40,17 @@ export interface Store {
     | "catalog"
     | "youcan"
     | "other";
-  created: Date;
   updated: Date;
 
-  sale_price: number;
-  compared_at_price: number;
-  currency: string;
-
-  consumer_key: string;
-  consumer_secret: string;
-
-  external_data: object;
-  internal_data: object;
-
+  url: string;
   users: StoreUser;
-  languages: string[];
-  address: BillingAddress;
-
-  debit: number;
-  credit: number;
 }
 
 export interface StoreUser {
   email: string;
-  roles: string[];
   first_name?: string;
   last_name?: string;
+  roles: string[];
 }
 
 export interface BillingAddress extends Address {
