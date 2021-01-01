@@ -3,6 +3,7 @@
     "Knawat",
     "iban",
     "jscrapper",
+    "purchaseorder",
     "salesorder"
   ],
   "eslint.format.enable": true,
