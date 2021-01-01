@@ -20,7 +20,7 @@ export interface PurchaseOrder {
   total: number;
 }
 
-interface PurchaseOrderItem {
+export interface PurchaseOrderItem {
   description: string;
   discount: number;
   name: string;
@@ -31,4 +31,16 @@ interface PurchaseOrderItem {
   taxName: string;
   taxPercentage: number;
   total: number;
+}
+
+export interface PurchaseOrderComment {
+  commentId: string;
+  commentType: string;
+  date: Date;
+  dateDescription: string;
+  description: string;
+  operationType: string;
+  purchaseorderId: string;
+  time: string;
+  transactionType: string;
 }
