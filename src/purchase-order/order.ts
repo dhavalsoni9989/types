@@ -1,9 +1,10 @@
-import { Address } from "./common";
-import { Bill } from "./bill";
-import { PurchaseOrderItem } from "purchase-order-item";
-import { PurchaseReceive } from "./purchase-order-receive";
-import { PurchaseTax } from "./purchase-tax";
-import { SalesOrder } from "./sales-order";
+import { Address } from "../common";
+import { Bill } from "../bill";
+import { PurchaseOrderComment } from "./comment";
+import { PurchaseOrderItem } from "./item";
+import { PurchaseReceive } from "./receive";
+import { PurchaseTax } from "./tax";
+import { SalesOrder } from "../sales-order";
 
 export interface PurchaseOrder {
   adjustment: number;
@@ -46,16 +47,4 @@ export interface PurchaseOrder {
   taxes: PurchaseTax[];
   terms: string;
   total: number;
-}
-
-export interface PurchaseOrderComment {
-  commentId: string;
-  commentType: string;
-  date: Date;
-  dateDescription: string;
-  description: string;
-  operationType: string;
-  purchaseorderId: string;
-  time: string;
-  transactionType: string;
 }
