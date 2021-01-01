@@ -1,3 +1,9 @@
+/**
+ * MP Coupon
+ *
+ * @export
+ * @interface Coupon
+ */
 export interface Coupon {
   appliedMemberships: string[];
   auto: boolean;

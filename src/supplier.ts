@@ -33,7 +33,7 @@ export interface Supplier {
     enabled: boolean;
     type: string;
   };
-  jscrapper_urls: string;
+  jscrapper_urls: string[];
   key: string;
   languages: string[];
   last_translation_update: Date;

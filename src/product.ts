@@ -1,5 +1,11 @@
 import { I18nString } from "./common";
 
+/**
+ * MP Product
+ *
+ * @export
+ * @interface Product
+ */
 export interface Product {
   archive: boolean;
 
