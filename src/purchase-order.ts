@@ -1,5 +1,6 @@
 import { Address } from "./common";
 import { Bill } from "./bill";
+import { PurchaseOrderItem } from "purchase-order-item";
 import { PurchaseReceive } from "./purchase-order-receive";
 import { PurchaseTax } from "./purchase-tax";
 import { SalesOrder } from "./sales-order";
@@ -44,19 +45,6 @@ export interface PurchaseOrder {
   taxTotal: number;
   taxes: PurchaseTax[];
   terms: string;
-  total: number;
-}
-
-export interface PurchaseOrderItem {
-  description: string;
-  discount: number;
-  name: string;
-  quantity: number;
-  rate: number;
-  sku: string;
-  taxId: string;
-  taxName: string;
-  taxPercentage: number;
   total: number;
 }
 
