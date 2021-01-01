@@ -1,0 +1,15 @@
+{
+  "cSpell.words": [
+    "Knawat",
+    "iban",
+    "jscrapper",
+    "salesorder"
+  ],
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
+}

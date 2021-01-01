@@ -2,9 +2,15 @@
   "name": "@knawat/types",
   "version": "1.0.0",
   "description": "Shared types between Knawat apps",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test": "npm run lint",
+    "build": "tsc --build tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/Knawat/types/issues"
   },
-  "homepage": "https://github.com/Knawat/types#readme"
+  "homepage": "https://github.com/Knawat/types#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.16.0",
+    "eslint-plugin-typescript-sort-keys": "^1.5.0",
+    "typescript": "^4.1.3"
+  }
 }

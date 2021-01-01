@@ -1,5 +1,5 @@
-import { I18nString } from "./common";
 import { Coupon } from "./coupon";
+import { I18nString } from "./common";
 
 export class Membership {
   id: string;
@@ -13,6 +13,6 @@ export class Membership {
   discount: number;
   paymentFrequency: number;
   paymentFrequencyType: "month" | "year";
-  attributes: object;
+  attributes: unknown;
   coupon: Coupon;
 }
