@@ -1,5 +1,5 @@
-import { I18nString } from "./common";
 import { Coupon } from "./coupon";
+import { I18nString } from "./common";
 
 export class Membership {
   id: string;

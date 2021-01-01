@@ -1,26 +1,12 @@
 import { Address } from "./common";
 
 export interface SalesOrder {
-  id: string;
-  items: Partial<SalesOrderItem>[];
-  shipping: Address;
-  total: number;
-  discount: number;
-  externalId: string;
-  createDate: Date;
-  updateDate: Date;
-  notes: string;
   adjustment: number;
   adjustmentDescription: string;
-  orderNumber: string;
-  taxTotal: number;
-  invoice_url: string;
-  shipping_method: string;
-  shipment_date: string;
-  trackingNumber: string;
   coupon: string;
-  warnings: string[];
-  warningsSnippet: string;
+  createDate: Date;
+  discount: number;
+  externalId: string;
   financialStatus:
     | "unpaid"
     | "paid"
@@ -37,22 +23,36 @@ export interface SalesOrder {
     | "shipped"
     | "delivered"
     | "voided";
+  id: string;
+  invoice_url: string;
+  items: Partial<SalesOrderItem>[];
+  notes: string;
+  orderNumber: string;
+  shipment_date: string;
+  shipping: Address;
+  shipping_method: string;
+  taxTotal: number;
+  total: number;
+  trackingNumber: string;
+  updateDate: Date;
+  warnings: string[];
+  warningsSnippet: string;
 }
 
 interface SalesOrderItem {
-  id: string;
-  sku: string;
-  name: string;
   description: string;
-  rate: number;
-
-  quantity: number;
-  quantityCancelled: number;
   discount: number;
-  total: number;
+  id: string;
+  name: string;
+  quantity: number;
 
+  quantityCancelled: number;
+  rate: number;
+  sku: string;
   taxId: string;
+
   taxName: string;
-  taxType: string;
   taxPercentage: number;
+  taxType: string;
+  total: number;
 }

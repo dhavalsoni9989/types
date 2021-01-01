@@ -1,42 +1,42 @@
 import { I18nString } from "./common";
 
 export interface Product {
-  sku: string;
-
-  name: I18nString;
-  description: I18nString;
   archive: boolean;
 
-  externalUrl: string;
-
-  externalId: string;
-
-  supplier: string;
-
-  images: string[];
-  tax_class: string;
-
+  attributes: ProductAttribute[];
   categories: {
     id: number;
     name: I18nString;
   };
+  description: I18nString;
+
+  externalId: string;
+
+  externalUrl: string;
+
+  images: string[];
+
+  name: I18nString;
   ship_from: {
     city: string;
     country: string;
   };
-  attributes: ProductAttribute[];
+
+  sku: string;
+  supplier: string;
+  tax_class: string;
   variations: ProductVariation[];
 }
 
 interface ProductVariation {
-  sku: string;
-  externalId: string;
-  cost_price: number;
-  sale_price: number;
-  market_price: number;
-  weight: number;
-  quantity: number;
   attributes: ProductVariationAttribute[];
+  cost_price: number;
+  externalId: string;
+  market_price: number;
+  quantity: number;
+  sale_price: number;
+  sku: string;
+  weight: number;
 }
 
 interface ProductAttribute {

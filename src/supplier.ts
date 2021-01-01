@@ -1,85 +1,85 @@
 import { Address } from "./common";
 
 export interface Supplier {
-  id: string;
-  project_key: string;
-  logo: string;
-  email: string;
-  sku_prefix: string;
   active: boolean;
+  address: SupplierAddress[];
+  bank: Bank;
   beta: boolean;
+  billing: {
+    address: Address;
+    legal_name: string;
+    registration_number: string | number;
+    tax_number: string | number;
+  };
+  company_description: string;
   cost_price: number;
-  sale_price: number;
-  min_stock: number;
-  max_cost: number;
-  min_cost: number;
-  vendor: number;
+  created_date: Date;
+  currency: string;
   default_warehouse_id: string;
+  email: string;
+  excluded_attributes: string[];
+  excluded_brands: string[];
+  excluded_categories: string[];
   handling_time: {
     from: number;
     to: number;
   };
-  languages: string[];
-  company_description: string;
-  jscrapper_urls: string;
-  translation_pipes: TranslationPipe[];
-  last_translation_update: Date;
-  translation_worker: boolean;
-  address: SupplierAddress[];
-  users: User[];
-  key: string;
-  billing: {
-    address: Address;
-    tax_number: string | number;
-    registration_number: string | number;
-    legal_name: string;
-  };
-  bank: Bank;
-  excluded_brands: string[];
-  excluded_attributes: string[];
-  excluded_categories: string[];
-  skipping_words: string[];
-  vat: number;
-  secret: string;
-  name: string;
-  created_date: Date;
-  updated_date: Date;
-  source_type: string;
-  currency: string;
-  xml_url: string[];
-  url: string;
+  id: string;
   integrations: {
-    enabled: boolean;
-    type: string;
     data: {
       access_token: string;
       fields: any;
     };
+    enabled: boolean;
+    type: string;
   };
+  jscrapper_urls: string;
+  key: string;
+  languages: string[];
+  last_translation_update: Date;
+  logo: string;
+  max_cost: number;
+  min_cost: number;
+  min_stock: number;
+  name: string;
+  project_key: string;
+  sale_price: number;
+  secret: string;
+  skipping_words: string[];
+  sku_prefix: string;
+  source_type: string;
+  translation_pipes: TranslationPipe[];
+  translation_worker: boolean;
+  updated_date: Date;
+  url: string;
+  users: User[];
+  vat: number;
+  vendor: number;
+  xml_url: string[];
 }
 
 interface TranslationPipe {
-  from: string;
-  to: string;
   // TODO: enum apply_to
   apply_to: string[];
+  from: string;
+  to: string;
 }
 interface SupplierAddress {
+  city: string;
+  country: string;
   line1: string;
   line2: string;
   post_code: string;
-  city: string;
   state: string;
-  country: string;
 }
 interface Bank {
-  swift_code: string;
-  iban_no: string;
-  recipient_name: string;
-  recipient_address: string;
   account_number: string;
-  bank_country: string;
   bank_branch: string;
+  bank_country: string;
+  iban_no: string;
+  recipient_address: string;
+  recipient_name: string;
+  swift_code: string;
 }
 interface User {
   email: string;

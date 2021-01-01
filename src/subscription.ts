@@ -5,15 +5,15 @@
  * @interface Subscription
  */
 export interface Subscription {
-  id: string;
-  membershipId: string;
-  storeId: string;
-  invoiceId: string;
-  reference: string;
-  status: "confirmed" | "pending" | "cancelled";
-  startDate: Date;
-  expireDate: Date;
   autoRenew: boolean;
+  expireDate: Date;
+  id: string;
+  invoiceId: string;
+  membershipId: string;
+  reference: string;
   renewed: boolean;
   retries: Date[];
+  startDate: Date;
+  status: "confirmed" | "pending" | "cancelled";
+  storeId: string;
 }
