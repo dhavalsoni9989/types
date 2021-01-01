@@ -1,22 +1,49 @@
 import { Address } from "./common";
+import { Bill } from "./bill";
+import { PurchaseReceive } from "./purchase-order-receive";
+import { PurchaseTax } from "./purchase-tax";
+import { SalesOrder } from "./sales-order";
 
 export interface PurchaseOrder {
+  adjustment: number;
+
+  adjustmentDescription: string;
   attention: string;
-  currencyCode?: string;
-  currencySymbol?: string;
-  deliveryDate: Date;
-  expectedDeliveryDate: Date;
+  billedStatus: string;
+  bills: Bill[];
+  comments: PurchaseOrderComment[];
+  createdTime: string;
+  currencyCode: string;
+  currencySymbol: string;
+  date: string;
+  deliveryAddress: Address;
+  deliveryCustomerId: string;
+  deliveryCustomerName: string;
+  deliveryDate: string;
+  deliveryOrgAddressId: string;
+  exchangeRate: number;
+  expectedDeliveryDate: string;
+  isDropShipment: boolean;
   isInclusiveTax: boolean;
   items: PurchaseOrderItem[];
-  note: string;
+  lastModifiedTime: string;
+  notes: string;
   orderStatus: string;
   purchaseorderId: string;
   purchaseorderNumber: string;
+  purchasereceives: PurchaseReceive[];
+  receivedStatus: string;
+  referenceNumber: string;
+  salesorderId: string;
+  salesorders: SalesOrder[];
   shipVia: string;
-  shipmentTrackingNumber: string;
-  shipping: Address;
+  shipmentTrackingNumber?: string;
   status: string;
   subTotal: number;
+  subTotalInclusiveOfTax: number;
+  taxTotal: number;
+  taxes: PurchaseTax[];
+  terms: string;
   total: number;
 }
 
