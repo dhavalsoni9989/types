@@ -8,7 +8,6 @@ import { SalesOrder } from "../sales-order";
 
 export interface PurchaseOrder {
   adjustment: number;
-
   adjustmentDescription: string;
   attention: string;
   billedStatus: string;

@@ -4,7 +4,9 @@
     "iban",
     "jscrapper",
     "purchaseorder",
-    "salesorder"
+    "purchasereceives",
+    "salesorder",
+    "salesorders"
   ],
   "eslint.format.enable": true,
   "[javascript]": {
