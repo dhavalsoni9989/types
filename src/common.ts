@@ -18,3 +18,17 @@ export interface Address {
   postcode: string;
   state: string;
 }
+
+/**
+ * Pass template depend on store or supplier
+ *
+ * @export
+ * @interface RoleUser
+ * @template T
+ */
+export interface RoleUser<T> {
+  email: string;
+  first_name?: string;
+  last_name?: string;
+  roles: T[];
+}

@@ -1,4 +1,4 @@
-import { Address } from "./common";
+import { Address, RoleUser } from "./common";
 
 export interface Supplier {
   active: boolean;
@@ -52,7 +52,7 @@ export interface Supplier {
   translation_worker: boolean;
   updated_date: Date;
   url: string;
-  users: User[];
+  users: RoleUser<"owner" | "accounting" | "products" | "orders">[];
   vat: number;
   vendor: number;
   xml_url: string[];
@@ -80,9 +80,4 @@ interface Bank {
   recipient_address: string;
   recipient_name: string;
   swift_code: string;
-}
-interface User {
-  email: string;
-  // TODO: enum roles
-  roles: string[];
 }
