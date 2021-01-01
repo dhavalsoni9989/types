@@ -18,7 +18,7 @@ export interface Supplier {
   handling_time: {
     from: number;
     to: number;
-    };
+  };
   languages: string[];
   company_description: string;
   jscrapper_urls: string;
@@ -50,7 +50,7 @@ export interface Supplier {
   url: string;
   integrations: {
     enabled: boolean;
-    type: 'ideasoft';
+    type: string;
     data: {
       access_token: string;
       fields: any;
@@ -62,7 +62,7 @@ interface TranslationPipe {
   from: string;
   to: string;
   // TODO: enum apply_to
-  apply_to: string[]
+  apply_to: string[];
 }
 interface SupplierAddress {
   line1: string;

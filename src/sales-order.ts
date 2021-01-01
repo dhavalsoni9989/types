@@ -1,8 +1,8 @@
 import { Address } from "./common";
 
-export interface Order {
+export interface SalesOrder {
   id: string;
-  items: Partial<OrderItem>[];
+  items: Partial<SalesOrderItem>[];
   shipping: Address;
   total: number;
   discount: number;
@@ -39,7 +39,7 @@ export interface Order {
     | "voided";
 }
 
-interface OrderItem {
+interface SalesOrderItem {
   id: string;
   sku: string;
   name: string;
