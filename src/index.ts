@@ -5,6 +5,7 @@ export * from "./currency";
 export * from "./invoice";
 export * from "./membership";
 export * from "./product";
+export * from "./purchase-order";
 export * from "./sales-order";
 export * from "./shipping-policy";
 export * from "./store";
