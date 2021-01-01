@@ -1,4 +1,4 @@
-import { Address, RoleUser } from "./common";
+import { Address, I18nString, RoleUser } from "./common";
 
 export interface Supplier {
   active: boolean;
@@ -59,10 +59,9 @@ export interface Supplier {
 }
 
 interface TranslationPipe {
-  // TODO: enum apply_to
-  apply_to: string[];
-  from: string;
-  to: string;
+  apply_to: "attributes" | "name" | "description" | "short_description";
+  from: keyof I18nString;
+  to: keyof I18nString;
 }
 interface SupplierAddress {
   city: string;
