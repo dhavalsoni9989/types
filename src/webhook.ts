@@ -1,9 +1,8 @@
-export interface Webhook {
+export interface Webhook<T> {
   createdAt: Date;
   id: string;
   supplierId: string;
-  // TODO: enum topics
-  topic: string;
+  topic: T;
   updatedAt: Date;
   url: string;
 }

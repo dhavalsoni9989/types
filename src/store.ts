@@ -1,4 +1,4 @@
-import { Address } from "./common";
+import { Address, RoleUser } from "./common";
 
 export interface Store {
   address: BillingAddress;
@@ -43,14 +43,7 @@ export interface Store {
   updated: Date;
 
   url: string;
-  users: StoreUser;
-}
-
-export interface StoreUser {
-  email: string;
-  first_name?: string;
-  last_name?: string;
-  roles: string[];
+  users: RoleUser<"owner" | "accounting" | "products" | "orders">[];
 }
 
 export interface BillingAddress extends Address {
