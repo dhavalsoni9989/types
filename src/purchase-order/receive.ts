@@ -2,7 +2,7 @@ import { Bill } from "bill";
 
 export interface PurchaseReceive {
   bills: Bill[];
-  date: string;
+  date: Date;
   notes: string;
   receiveId: string;
   receiveNumber: string;

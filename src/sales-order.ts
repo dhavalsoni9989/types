@@ -28,7 +28,7 @@ export interface SalesOrder {
   items: Partial<SalesOrderItem>[];
   notes: string;
   orderNumber: string;
-  shipment_date: string;
+  shipment_date: Date;
   shipping: Address;
   shipping_method: string;
   taxTotal: number;
