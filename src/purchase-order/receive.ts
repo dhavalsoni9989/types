@@ -1,4 +1,4 @@
-import { Bill } from "bill";
+import { Bill } from "../bill";
 
 export interface PurchaseReceive {
   bills: Bill[];
