@@ -13,7 +13,7 @@ export interface SPProduct {
   description_short: I18nString;
   images: string[];
   name: I18nString;
-  qualified: number;
+  qualified: 1 | 2 | 4 | 5;
   sku: string;
   source_sku: string;
   supplier_id: string;
