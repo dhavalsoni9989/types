@@ -54,7 +54,7 @@ export interface Supplier {
   url: string;
   users: RoleUser<"owner" | "accounting" | "products" | "orders">[];
   vat: number;
-  vendor: number;
+  vendor: string;
   xml_url: string[];
 }
 
