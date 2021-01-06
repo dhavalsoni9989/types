@@ -12,5 +12,6 @@ export * from "./shipping-policy";
 export * from "./store";
 export * from "./subscription";
 export * from "./supplier";
+export * from "./supplier-product";
 export * from "./tax";
 export * from "./webhook";
