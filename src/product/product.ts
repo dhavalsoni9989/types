@@ -1,4 +1,6 @@
-import { I18nString } from "./common";
+import { I18nString } from "../common";
+import { ProductAttribute } from "./attribute";
+import { ProductVariation } from "./variation";
 
 /**
  * MP Product
@@ -32,25 +34,4 @@ export interface Product {
   supplier: string;
   tax_class: string;
   variations: ProductVariation[];
-}
-
-interface ProductVariation {
-  attributes: ProductVariationAttribute[];
-  cost_price: number;
-  externalId: string;
-  market_price: number;
-  quantity: number;
-  sale_price: number;
-  sku: string;
-  weight: number;
-}
-
-interface ProductAttribute {
-  name: I18nString;
-  options: I18nString[];
-}
-
-interface ProductVariationAttribute {
-  name: I18nString;
-  option: I18nString;
 }
