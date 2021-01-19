@@ -1,4 +1,5 @@
 import { Address } from "./common";
+import { PurchaseOrderInvoice } from "./purchase-order";
 
 export interface SalesOrder {
   adjustment: number;
@@ -23,15 +24,23 @@ export interface SalesOrder {
     | "shipped"
     | "delivered"
     | "voided";
+  hasQtyCancelled: boolean;
   id: string;
   invoice_url: string;
+  invoices: PurchaseOrderInvoice[];
+  isInclusiveTax: boolean;
   items: Partial<SalesOrderItem>[];
+  knawat_order_status: string;
   notes: string;
   orderNumber: string;
-  shipment_date: Date;
+  shipmentDate: Date;
   shipping: Address;
+  shippingCharge: number;
   shipping_method: string;
+  status: string;
+  subscription: string;
   taxTotal: number;
+  taxes: SalesOrderTax[];
   total: number;
   trackingNumber: string;
   updateDate: Date;
@@ -55,4 +64,9 @@ interface SalesOrderItem {
   taxPercentage: number;
   taxType: string;
   total: number;
+}
+
+interface SalesOrderTax {
+  taxAmount: number;
+  taxName: string;
 }

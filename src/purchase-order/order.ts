@@ -30,6 +30,7 @@ export interface PurchaseOrder {
   lastModifiedTime: Date;
   notes: string;
   orderStatus: string;
+  po_status: string;
   purchaseorderId: string;
   purchaseorderNumber: string;
   purchasereceives: PurchaseReceive[];
@@ -39,6 +40,7 @@ export interface PurchaseOrder {
   salesorders: SalesOrder[];
   shipVia: string;
   shipmentTrackingNumber?: string;
+  shipping: Address[];
   status: string;
   subTotal: number;
   subTotalInclusiveOfTax: number;
