@@ -1,4 +1,7 @@
-import { Address } from "./common";
+import { Address } from "../common";
+import { SalesOrderInvoice } from "./invoice";
+import { SalesOrderItem } from "./item";
+import { SalesOrderTax } from "./tax";
 
 export interface SalesOrder {
   adjustment: number;
@@ -23,36 +26,25 @@ export interface SalesOrder {
     | "shipped"
     | "delivered"
     | "voided";
+  hasQtyCancelled: boolean;
   id: string;
   invoice_url: string;
+  invoices: SalesOrderInvoice[];
+  isInclusiveTax: boolean;
   items: Partial<SalesOrderItem>[];
   notes: string;
   orderNumber: string;
-  shipment_date: Date;
+  shipmentDate: Date;
   shipping: Address;
+  shippingCharge: number;
   shipping_method: string;
+  status: string;
+  subscription: string;
   taxTotal: number;
+  taxes: SalesOrderTax[];
   total: number;
   trackingNumber: string;
   updateDate: Date;
   warnings: string[];
   warningsSnippet: string;
-}
-
-interface SalesOrderItem {
-  description: string;
-  discount: number;
-  id: string;
-  name: string;
-  quantity: number;
-
-  quantityCancelled: number;
-  rate: number;
-  sku: string;
-  taxId: string;
-
-  taxName: string;
-  taxPercentage: number;
-  taxType: string;
-  total: number;
 }
