@@ -1,5 +1,7 @@
-import { Address } from "./common";
-import { PurchaseOrderInvoice } from "./purchase-order";
+import { Address } from "../common";
+import { SalesOrderInvoice } from "./invoice";
+import { SalesOrderItem } from "./item";
+import { SalesOrderTax } from "./tax";
 
 export interface SalesOrder {
   adjustment: number;
@@ -27,10 +29,9 @@ export interface SalesOrder {
   hasQtyCancelled: boolean;
   id: string;
   invoice_url: string;
-  invoices: PurchaseOrderInvoice[];
+  invoices: SalesOrderInvoice[];
   isInclusiveTax: boolean;
   items: Partial<SalesOrderItem>[];
-  knawat_order_status: string;
   notes: string;
   orderNumber: string;
   shipmentDate: Date;
@@ -46,27 +47,4 @@ export interface SalesOrder {
   updateDate: Date;
   warnings: string[];
   warningsSnippet: string;
-}
-
-interface SalesOrderItem {
-  description: string;
-  discount: number;
-  id: string;
-  name: string;
-  quantity: number;
-
-  quantityCancelled: number;
-  rate: number;
-  sku: string;
-  taxId: string;
-
-  taxName: string;
-  taxPercentage: number;
-  taxType: string;
-  total: number;
-}
-
-interface SalesOrderTax {
-  taxAmount: number;
-  taxName: string;
 }

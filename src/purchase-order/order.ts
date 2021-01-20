@@ -17,7 +17,6 @@ export interface PurchaseOrder {
   currencyCode: string;
   currencySymbol: string;
   date: Date;
-  deliveryAddress: Address;
   deliveryCustomerId: string;
   deliveryCustomerName: string;
   deliveryDate: Date;
