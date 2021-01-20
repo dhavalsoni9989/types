@@ -1,4 +1,4 @@
-export interface Invoice {
+export interface SalesOrderInvoice {
   adjustment: number;
   balance: number;
   coupon: string;

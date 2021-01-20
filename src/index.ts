@@ -3,7 +3,6 @@ export * from "./category";
 export * from "./common";
 export * from "./coupon";
 export * from "./currency";
-export * from "./invoice";
 export * from "./membership";
 export * from "./product";
 export * from "./purchase-order";

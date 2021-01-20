@@ -1,6 +1,6 @@
 import { Address, I18nString, RoleUser } from "./common";
 
-export interface Supplier {
+export interface Supplier<T = unknown> {
   active: boolean;
   address: SupplierAddress[];
   bank: Bank;
@@ -28,7 +28,7 @@ export interface Supplier {
   integrations: {
     data: {
       access_token: string;
-      fields: unknown;
+      fields: T;
     };
     enabled: boolean;
     type: string;
