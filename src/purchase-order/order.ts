@@ -21,6 +21,7 @@ export interface PurchaseOrder {
   deliveryCustomerName: string;
   deliveryDate: Date;
   deliveryOrgAddressId: string;
+  discountTotal: number;
   exchangeRate: number;
   expectedDeliveryDate: Date;
   isDropShipment: boolean;
