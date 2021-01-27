@@ -40,7 +40,7 @@ export interface PurchaseOrder {
   salesorders: SalesOrder[];
   shipVia: string;
   shipmentTrackingNumber?: string;
-  shipping: Address[];
+  shipping: Address;
   status: string;
   subTotal: number;
   subTotalInclusiveOfTax: number;
