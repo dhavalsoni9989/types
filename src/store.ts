@@ -11,8 +11,8 @@ export interface Store<T = unknown, P = unknown> {
   currency: string;
 
   debit: number;
-  internal_data: T;
   external_data: P;
+  internal_data: T;
   
 
   languages: string[];
