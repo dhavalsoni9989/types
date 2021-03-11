@@ -1,6 +1,6 @@
 import { Address, RoleUser } from "./common";
 
-export interface Store {
+export interface Store<T = unknown, P = unknown> {
   address: BillingAddress;
 
   compared_at_price: number;
@@ -11,8 +11,9 @@ export interface Store {
   currency: string;
 
   debit: number;
-  external_data: unknown;
-  internal_data: unknown;
+  internal_data: T;
+  external_data: P;
+  
 
   languages: string[];
   logo: string;
