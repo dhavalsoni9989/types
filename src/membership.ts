@@ -1,7 +1,7 @@
 import { Coupon } from "./coupon";
 import { I18nString } from "./common";
 
-export class Membership {
+export class Membership<T = unknown> {
   id: string;
   name: I18nString;
   tagline: I18nString;
@@ -13,6 +13,6 @@ export class Membership {
   discount: number;
   paymentFrequency: number;
   paymentFrequencyType: "month" | "year";
-  attributes: unknown;
+  attributes: T;
   coupon: Coupon;
 }
