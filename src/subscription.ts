@@ -16,4 +16,5 @@ export interface Subscription {
   startDate: Date;
   status: "confirmed" | "pending" | "cancelled";
   storeId: string;
+  paymentGateway: 'paytr' | 'stripe' | 'shopify';
 }
