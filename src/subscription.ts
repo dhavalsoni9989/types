@@ -10,6 +10,7 @@ export interface Subscription {
   id: string;
   invoiceId: string;
   membershipId: string;
+  paymentGateway: string;
   reference: string;
   renewed: boolean;
   retries: Date[];
