@@ -1,8 +1,8 @@
 export interface I18nString {
-  ar: string;
-  en: string;
-  fr: string;
-  tr: string;
+  ar?: string;
+  en?: string;
+  fr?: string;
+  tr?: string;
 }
 
 export interface Address {
