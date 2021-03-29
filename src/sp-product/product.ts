@@ -5,13 +5,13 @@ import { SPProductVariation } from "./variation";
 
 export interface SPProduct {
   attributes?: ProductAttribute[];
-  external_id?: string;
   barcode?: string;
   brand: I18nString;
   categories?: SPCategory[];
   created_date?: Date;
   description?: I18nString;
   description_short?: I18nString;
+  external_id?: string;
   images: string[];
   name: I18nString;
   qualified?: 1 | 2 | 4 | 5;
