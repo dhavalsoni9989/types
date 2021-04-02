@@ -12,6 +12,9 @@ export interface SPProduct {
   description?: I18nString;
   description_short?: I18nString;
   external_id?: string;
+  fulfillment?: {
+    external_id: string;
+  };
   images: string[];
   name: I18nString;
   qualified?: 1 | 2 | 4 | 5;
