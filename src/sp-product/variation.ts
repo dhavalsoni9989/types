@@ -1,6 +1,7 @@
 import { ProductVariationAttribute } from "../product";
 
 export interface SPProductVariation {
+  external_id?: string;
   attributes: ProductVariationAttribute[];
   barcode?: string;
   market_price?: number;
