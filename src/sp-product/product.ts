@@ -6,7 +6,7 @@ import { SPProductVariation } from "./variation";
 export interface SPProduct {
   attributes?: ProductAttribute[];
   barcode?: string;
-  brand: I18nString;
+  brand?: I18nString;
   categories?: SPCategory[];
   created_date?: Date;
   description?: I18nString;
