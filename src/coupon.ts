@@ -3,8 +3,9 @@
  *
  * @export
  * @interface Coupon
+ * @template T
  */
-export interface Coupon {
+export interface Coupon<T = { [key: string]: string | number }> {
   appliedMemberships: string[];
   auto: boolean;
   campaignName: string;
@@ -15,6 +16,7 @@ export interface Coupon {
   };
   endDate: Date;
   maxUses: number;
+  metadata?: T;
   minAppliedAmount: number;
   shipping: {
     type: "%" | "$";
