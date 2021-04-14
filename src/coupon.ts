@@ -15,6 +15,9 @@ export interface Coupon {
   };
   endDate: Date;
   maxUses: number;
+  metadata?: {
+    stripeCouponId: string;
+  };
   minAppliedAmount: number;
   shipping: {
     type: "%" | "$";
