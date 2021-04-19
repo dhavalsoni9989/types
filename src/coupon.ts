@@ -10,6 +10,7 @@ export interface Coupon<T = { [key: string]: string | number }> {
   auto: boolean;
   campaignName: string;
   code: string;
+  createdAt: Date;
   discount: {
     shipping: Discount;
     tax: Discount;
@@ -23,6 +24,7 @@ export interface Coupon<T = { [key: string]: string | number }> {
   startDate: Date;
   totalAmount?: number;
   type: "salesorder" | "subscription";
+  updatedAt: Date;
   useCount: number;
 }
 
