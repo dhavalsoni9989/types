@@ -11,26 +11,22 @@ export interface Coupon<T = { [key: string]: string | number }> {
   campaignName: string;
   code: string;
   discount: {
-    type: "%" | "$";
-    value: number;
+    shipping: Discount;
+    tax: Discount;
+    total: Discount;
   };
   endDate: Date;
+  id?: string;
   maxUses: number;
   metadata?: T;
   minAppliedAmount: number;
-  shipping: {
-    type: "%" | "$";
-    value: number;
-  };
   startDate: Date;
-  tax: {
-    type: "%" | "$";
-    value: number;
-  };
-  total: {
-    type: "%" | "$";
-    value: number;
-  };
+  totalAmount?: number;
   type: "salesorder" | "subscription";
   useCount: number;
+}
+
+interface Discount {
+  type: '$' | '%';
+  value: number;
 }
