@@ -10,9 +10,14 @@ export class Membership<T = unknown> {
   active: boolean;
   public: boolean;
   cost: number;
+  country: string;
   discount: number;
+  strickedprice: number;
   paymentFrequency: number;
   paymentFrequencyType: "month" | "year";
   attributes: T;
   coupon: Coupon;
+  createdAt: Date;
+  updatedAt: Date;
+  isDefault: boolean;
 }
