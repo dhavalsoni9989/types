@@ -4,9 +4,11 @@ export interface PurchaseOrderItem {
   discount?: number;
   discountAmount?: number;
   id: string;
+  lineItemId: string;
   name: string;
   quantity: number;
   quantityCancelled: number;
+  quantityReceived: number;
   rate: number;
   sku: string;
   taxId: string;
