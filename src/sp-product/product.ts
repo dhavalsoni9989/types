@@ -13,7 +13,7 @@ export interface SPProduct {
   description_short?: I18nString;
   external_id?: string;
   fulfillment?: {
-    external_id: string;
+    fulfillment_center_id: string;
   };
   images: string[];
   name: I18nString;
