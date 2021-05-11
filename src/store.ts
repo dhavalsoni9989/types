@@ -4,22 +4,26 @@ export interface Store<T = unknown, P = unknown> {
   address: BillingAddress;
 
   compared_at_price: number;
+  compared_at_price_operator: number;
   consumer_key: string;
   consumer_secret: string;
   created: Date;
   credit: number;
-  currency: string;
 
+  currency: string;
   debit: number;
   external_data: P;
-  internal_data: T;
   
 
+  internal_data: T;
   languages: string[];
-  logo: string;
 
+  logo: string;
   name: string;
+
   sale_price: number;
+  sale_price_operator: number;
+  shipping_methods: ShippingMethod[];
 
   status:
     | "pending"
@@ -41,12 +45,24 @@ export interface Store<T = unknown, P = unknown> {
     | "catalog"
     | "youcan"
     | "other";
+  
   updated: Date;
-
+  
   url: string;
   users: RoleUser<"owner" | "accounting" | "products" | "orders">[];
 }
 
 export interface BillingAddress extends Address {
-  tax_number: string;
+  taxNumber: string;
+}
+
+/**
+ * Shipment methods priority
+ *
+ * @export
+ * @interface ShippingMethod
+ */
+ interface ShippingMethod {
+  name: string;
+  sort: number;
 }
