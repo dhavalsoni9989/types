@@ -16,5 +16,4 @@ export interface PurchaseOrderItem {
   taxPercentage: number;
   taxType: string;
   total: number;
-  warehouseId: string;
 }

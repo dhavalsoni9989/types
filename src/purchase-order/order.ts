@@ -24,6 +24,7 @@ export interface PurchaseOrder {
   discountTotal: number;
   exchangeRate: number;
   expectedDeliveryDate: Date;
+  fulfillmentCenterId: string;
   isDropShipment: boolean;
   isInclusiveTax: boolean;
   items: PurchaseOrderItem[];
