@@ -49,7 +49,7 @@ export interface Store<T = unknown, P = unknown> {
   updated: Date;
   
   url: string;
-  users: RoleUser<"owner" | "accounting" | "products" | "orders">[];
+  users: RoleUser<"owner" | "support" | "sales" | "accounting" | "products" | "orders">[];
 }
 
 export interface BillingAddress extends Address {
