@@ -12,12 +12,9 @@
     "test": "npm run lint",
     "build": "tsc --build tsconfig.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Knawat/types.git"
-  },
-  "author": "Knawat",
-  "license": "ISC",
+  "repository": "github:knawat/types",
+  "author": "Knawat, Inc. Team",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Knawat/types/issues"
   },
