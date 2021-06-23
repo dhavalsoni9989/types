@@ -51,7 +51,7 @@ export interface Store<T = unknown, P = unknown> {
   users: RoleUser<
     "owner" | "support" | "sales" | "accounting" | "products" | "orders"
   >[];
-  zone: "Turkey" | "KSA" | "ZZ";
+  zone: string;
 }
 
 export interface BillingAddress extends Address {
